@@ -54,7 +54,7 @@ export const projects: Project[] = [
     id: "siem-tuning-lab",
     title: "SIEM Tuning Lab",
     category: "cybersecurity",
-    tags: ["siem", "defensive", "automation"],
+    tags: ["placeholder", "siem", "defensive", "automation"],
     completedAt: "2026-01-18",
     updatedAt: "2026-02-12",
     summary:
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     id: "ctf-training-platform",
     title: "CTF Training Platform",
     category: "cybersecurity",
-    tags: ["ctf", "offensive", "platform"],
+    tags: ["placeholder", "ctf", "offensive", "platform"],
     completedAt: "2025-10-07",
     summary:
       "Designed a modular challenge platform for team onboarding and practical security drills.",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     id: "incident-playbook-revamp",
     title: "Incident Playbook Revamp",
     category: "cybersecurity",
-    tags: ["ir", "defensive", "risk"],
+    tags: ["placeholder", "ir", "defensive", "risk"],
     completedAt: "2025-06-03",
     summary:
       "Refactored incident playbooks into decision-driven flows tied to severity and business impact.",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     id: "edge-observability-foundation",
     title: "Edge Observability Foundation",
     category: "engineering",
-    tags: ["platform", "automation"],
+    tags: ["placeholder", "platform", "automation"],
     completedAt: "2026-02-02",
     summary:
       "Established observability baseline for edge services with shared telemetry standards.",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     id: "secure-ci-blueprint",
     title: "Secure CI Blueprint",
     category: "engineering",
-    tags: ["automation", "compliance", "defensive"],
+    tags: ["placeholder", "automation", "compliance", "defensive"],
     completedAt: "2025-11-22",
     summary:
       "Built a reusable CI blueprint with policy checks and signing guardrails.",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     id: "risk-control-mapping",
     title: "Risk-Control Mapping",
     category: "governance",
-    tags: ["risk", "compliance"],
+    tags: ["placeholder", "risk", "compliance"],
     completedAt: "2026-01-09",
     summary:
       "Mapped operational controls directly to risk statements and ownership domains.",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     id: "vendor-assurance-workflow",
     title: "Vendor Assurance Workflow",
     category: "governance",
-    tags: ["risk", "automation", "compliance"],
+    tags: ["placeholder", "risk", "automation", "compliance"],
     completedAt: "2025-08-16",
     summary:
       "Streamlined third-party assurance reviews through repeatable evidence requests.",

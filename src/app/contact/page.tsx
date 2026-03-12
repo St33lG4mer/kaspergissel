@@ -14,7 +14,7 @@ const contactLinks = [
   { label: "Email", href: "mailto:kasper@kaspergissel.dk" },
   { label: "LinkedIn", href: "https://linkedin.com/" },
   { label: "GitHub", href: "https://github.com/" },
-  { label: "CV", href: "/cv.pdf" },
+  { label: "CV", href: "/pub.CV.pdf" },
 ];
 
 export default function ContactPage() {
