@@ -39,7 +39,7 @@ export default function ProjectsView({ projects, lockedCategory }: ProjectsViewP
   const rawYear = searchParams.get("year");
   const rawSort = searchParams.get("sort");
 
-  const tag = rawTag && TAGS.includes(rawTag as (typeof TAGS)[number]) ? rawTag : null;
+  const tag = rawTag && availableTags.includes(rawTag as (typeof TAGS)[number]) ? rawTag : null;
   const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : null;
   const year = parsedYear && availableYears.includes(parsedYear) ? parsedYear : null;
   const sort: SortOption = isValidSort(rawSort) ? rawSort : "newest";
