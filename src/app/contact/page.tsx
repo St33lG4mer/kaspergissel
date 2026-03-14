@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const contactLinks = [
-  { label: "Email", href: "mailto:kaspergissel3@gmail.dk" },
+  { label: "Email", href: "mailto:kaspergissel3@gmail.com" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kasper-gissel-27a492254/" },
   { label: "GitHub", href: "https://github.com/St33lG4mer" },
   { label: "CV", href: "/pub.CV.pdf" },
