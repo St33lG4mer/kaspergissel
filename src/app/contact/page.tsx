@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const contactLinks = [
-  { label: "Email", href: "mailto:kasper@kaspergissel.dk" },
-  { label: "LinkedIn", href: "https://linkedin.com/" },
-  { label: "GitHub", href: "https://github.com/" },
+  { label: "Email", href: "mailto:kaspergissel3@gmail.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kasper-gissel-27a492254/" },
+  { label: "GitHub", href: "https://github.com/St33lG4mer" },
   { label: "CV", href: "/pub.CV.pdf" },
 ];
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
       <SectionHeading
         eyebrow="Contact"
         title="Let’s connect"
-        description="All contact options are always available, with a subtle optional 3D side element."
+        description="All contact options are available here."
       />
 
       <section className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">

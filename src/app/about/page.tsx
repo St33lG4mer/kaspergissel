@@ -15,14 +15,14 @@ export default function AboutPage() {
       <SectionHeading
         eyebrow="About"
         title="Kasper Gissel"
-        description="Security-focused engineer with a governance mindset and a bias for practical implementation."
+        description="Cybersecurity student focused on practical security engineering and governance."
       />
 
       <section className="surface rounded-xl p-6 text-slate-300">
         <p>
-          I work across cybersecurity, engineering, and governance to help teams design resilient systems
-          without unnecessary complexity. My focus is measurable improvement: faster detection, clearer
-          ownership, and stronger delivery foundations.
+          I&apos;m studying cybersecurity with a focus on hands-on lab work and practical
+          experimentation. My work spans security engineering, detection, and governance — building
+          skills through self-directed projects, lab environments, and tooling.
         </p>
       </section>
     </Container>

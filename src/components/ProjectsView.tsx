@@ -30,15 +30,20 @@ export default function ProjectsView({ projects, lockedCategory }: ProjectsViewP
     const years = baseProjects.map((item) => new Date(item.completedAt).getFullYear());
     return [...new Set(years)].sort((a, b) => b - a);
   }, [baseProjects]);
+  const availableTags = useMemo(
+    () => TAGS.filter((tag) => baseProjects.some((project) => project.tags.includes(tag))),
+    [baseProjects],
+  );
 
   const rawTag = searchParams.get("tag");
   const rawYear = searchParams.get("year");
   const rawSort = searchParams.get("sort");
 
-  const tag = rawTag && TAGS.includes(rawTag as (typeof TAGS)[number]) ? rawTag : null;
+  const tag = rawTag && availableTags.includes(rawTag as (typeof TAGS)[number]) ? rawTag : null;
   const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : null;
   const year = parsedYear && availableYears.includes(parsedYear) ? parsedYear : null;
   const sort: SortOption = isValidSort(rawSort) ? rawSort : "newest";
+  const isArchiveEmpty = baseProjects.length === 0;
 
   const normalizedSearch = useMemo(() => {
     const params = new URLSearchParams();
@@ -113,6 +118,22 @@ export default function ProjectsView({ projects, lockedCategory }: ProjectsViewP
   const reset = () => router.push(pathname, { scroll: false });
   const basePath = lockedCategory ? `/projects/${lockedCategory}` : "/projects";
 
+  if (isArchiveEmpty) {
+    return (
+      <section className="surface rounded-2xl border border-slate-800/80 p-8 md:p-10">
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-cyan-300">Archive status</p>
+        <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-100">
+          Case studies are being published as the lab matures.
+        </h3>
+        <p className="mt-3 max-w-3xl text-slate-300">
+          This archive is reserved for completed write-ups with implementation detail, lessons learned,
+          and measurable outcomes. As roadmap projects move from Planned to In Progress to Completed,
+          detailed case studies will be added here progressively.
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className="space-y-6">
       <div className="surface rounded-xl p-4 md:p-5">
@@ -133,7 +154,7 @@ export default function ProjectsView({ projects, lockedCategory }: ProjectsViewP
               >
                 All tags
               </button>
-              {TAGS.map((item) => (
+              {availableTags.map((item) => (
                 <button
                   key={item}
                   type="button"
