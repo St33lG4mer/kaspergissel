@@ -49,10 +49,20 @@ export default async function CategoryProjectsPage({ params }: { params: Params 
   }
 
   const meta = CATEGORY_META[category];
+  const categoryProjects = projects.filter((project) => project.category === category);
+  const hasProjects = categoryProjects.length > 0;
 
   return (
     <Container className="space-y-8 py-12 md:py-16">
-      <SectionHeading eyebrow="Projects" title={meta.title} description={meta.intro} />
+      <SectionHeading
+        eyebrow="Projects"
+        title={hasProjects ? meta.title : `${meta.title} case studies`}
+        description={
+          hasProjects
+            ? meta.intro
+            : `Detailed ${meta.title.toLowerCase()} case studies will be published progressively as roadmap projects move from Planned to In Progress to Completed.`
+        }
+      />
       <Suspense
         fallback={<div className="surface rounded-xl p-8 text-center text-slate-300">Loading projects…</div>}
       >

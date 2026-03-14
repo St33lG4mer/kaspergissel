@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import type { Group } from "three";
@@ -53,12 +53,13 @@ function BlockCluster() {
 }
 
 export default function ContactHub3D() {
-  const [canRender, setCanRender] = useState(false);
+  const canRender = useMemo(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
 
-  useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const reduced = media.matches;
-    setCanRender(!reduced && hasWebGLSupport());
+    return !media.matches && hasWebGLSupport();
   }, []);
 
   if (!canRender) {

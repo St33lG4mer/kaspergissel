@@ -1,5 +1,4 @@
 export const TAGS = [
-  "placeholder",
   "offensive",
   "defensive",
   "ir",
